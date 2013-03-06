@@ -20,8 +20,8 @@ public class TodayCellTest {
 	}
 	
 	@Test
-	public void testToday() {
-		assertEquals("Vendredi", cell.ask("Quel jour est-il?"));
+	public void testToday() { 
+		assertEquals("Vendredi 8 mars 2013", cell.ask("Quel jour est-il?"));
 	}
 	
 	@Test

@@ -4,13 +4,18 @@ import java.util.Calendar;
 
 import IUT.BoBot.SmartCell;
 
-/**
- * Reply to "Quel jour est-il?"
- *
- */
 public class TodayCell implements SmartCell {
 	
 	Calendar calendar;
+	
+	private String[] weekDays = new String[] { 
+			"Dimanche", "Lundi", "Mardi", "Mercredi",
+			"Jeudi", "Vendredi", "Samedi" 
+			};
+	
+	private String[] month = new String[] {
+			"janvier", "fevrier", "mars", "avril", "mai", "juin", "juillet", "aout", "septembre",
+			"octobre", "novembre", "decembre"}; 
 
 	/**
 	 * Initialize the cell with the date of today.
@@ -18,10 +23,7 @@ public class TodayCell implements SmartCell {
 	public TodayCell() {
 		this.calendar = Calendar.getInstance();
 	}
-	
-	/**
-	 * Initialize the cell with the date passed in.
-	 */
+
 	public TodayCell(Calendar calendar) {
 		this.calendar = calendar;
 	}
@@ -31,13 +33,14 @@ public class TodayCell implements SmartCell {
 			return null;
 		
 		int dayOfWeek = calendar.get(Calendar.DAY_OF_WEEK);
-		return weekDays[dayOfWeek - 1];
+		int day = calendar.get(Calendar.DAY_OF_MONTH);
+		int mois = calendar.get(Calendar.MONTH);
+		int annee = calendar.get(Calendar.YEAR);
+		
+		return (weekDays[dayOfWeek - 1] +' ' + day + ' ' +  month[mois] + ' ' + annee);
 	}
 	
-	private String[] weekDays = new String[] { 
-			"Dimanche", "Lundi", "Mardi", "Mercredi",
-			"Jeudi", "Vendredi", "Samedi" 
-			};
+
 
 
 

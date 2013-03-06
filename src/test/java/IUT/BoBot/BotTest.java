@@ -28,6 +28,12 @@ public class BotTest
     }
     
     @Test
+    public void testSalut()
+    {
+        assertEquals("Salut!", bot.ask("Salut"));
+    }
+    
+    @Test
     public void testNull()
     {
         assertEquals(null, bot.ask("This is not a question."));

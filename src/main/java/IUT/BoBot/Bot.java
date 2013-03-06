@@ -11,8 +11,10 @@ public class Bot
 	 */
 	final SmartCell[] smartCells = new SmartCell[] {
 		new BonjourCell(),
+		new SalutCell(),
 		new BonjourWithNameCell(),
-		new TodayCell()
+		new TodayCell(),
+		new AuRevoirCell()
 	};
 
 	/**
@@ -28,6 +30,6 @@ public class Bot
 			  return answer;
 		}
 		return null;
-	}
+	} 
 	
 }

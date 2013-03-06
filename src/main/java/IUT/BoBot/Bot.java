@@ -10,9 +10,11 @@ public class Bot
 	 * find an answer.
 	 */
 	final SmartCell[] smartCells = new SmartCell[] {
+		new AuRevoirCell(),
 		new BonjourCell(),
 		new BonjourWithNameCell(),
-		new TodayCell()
+		new TodayCell(),
+		new SalutCell()
 	};
 
 	/**

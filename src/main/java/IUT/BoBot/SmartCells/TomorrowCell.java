@@ -4,8 +4,7 @@ import java.util.Calendar;
 
 import IUT.BoBot.SmartCell;
 
-public class TodayCell implements SmartCell {
-	
+public class TomorrowCell implements SmartCell {
 	Calendar calendar;
 	
 	private String[] weekDays = new String[] { 
@@ -20,16 +19,16 @@ public class TodayCell implements SmartCell {
 	/**
 	 * Initialize the cell with the date of today.
 	 */
-	public TodayCell() {
+	public TomorrowCell() {
 		this.calendar = Calendar.getInstance();
 	}
 
-	public TodayCell(Calendar calendar) {
+	public TomorrowCell(Calendar calendar) {
 		this.calendar = calendar;
 	}
 	
 	public String ask(String question) {
-		if(!question.contains("Quel jour"))
+		if(!question.contains("Quel jour demain "))
 			return null;
 		
 		int dayOfWeek = calendar.get(Calendar.DAY_OF_WEEK);
@@ -37,11 +36,7 @@ public class TodayCell implements SmartCell {
 		int mois = calendar.get(Calendar.MONTH);
 		int annee = calendar.get(Calendar.YEAR);
 		
-		return (weekDays[dayOfWeek - 1] +' ' + day + ' ' +  month[mois] + ' ' + annee);
+		return (weekDays[dayOfWeek] +' ' + ( day + 1) + ' ' +  month[mois] + ' ' + annee);
 	}
 	
-
-
-
-
 }

@@ -1,0 +1,21 @@
+package IUT.BoBot.SmartCells;
+
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Test;
+
+public class AurevoirCellTest {
+
+	AurevoirCell cell = new AurevoirCell();
+
+	@Test
+	public void testAurevoir() {
+		assertEquals("Aurevoir!", cell.ask("Aurevoir"));
+		
+	}
+	
+	@Test
+	public void testNotAurevoir() {
+		assertEquals(null, cell.ask("au revoir"));
+	}
+}

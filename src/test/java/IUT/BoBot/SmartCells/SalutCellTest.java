@@ -14,7 +14,7 @@ public class SalutCellTest {
 	}
 	
 	@Test
-	public void testNotBonjour() {
+	public void testNotSalut() {
 		assertEquals(null, cell.ask("au revoir"));
 	}
 

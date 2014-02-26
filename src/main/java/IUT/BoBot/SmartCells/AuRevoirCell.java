@@ -2,7 +2,7 @@ package IUT.BoBot.SmartCells;
 
 import IUT.BoBot.SmartCell;
 
-public class AuRevoir implements SmartCell{
+public class AuRevoirCell implements SmartCell{
 	public String ask(String question) {
 		if(question.contains("Au revoir!"))
 		  return "Au revoir!";

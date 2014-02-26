@@ -1,6 +1,7 @@
 package IUT.BoBot;
 
 import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
@@ -25,6 +26,11 @@ public class BotTest
     public void testJeMAppelle()
     {
         assertEquals("Bonjour Seb!", bot.ask("Je m'appelle Seb"));
+    }
+
+    @Test
+    public void testSalut() {
+        assertEquals("Salut!", bot.ask("Salut"));
     }
     
     @Test

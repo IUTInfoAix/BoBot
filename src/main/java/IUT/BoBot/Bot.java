@@ -13,8 +13,9 @@ public class Bot
 		new BonjourCell(),
 		new BonjourWithNameCell(),
 		new TodayCell(),
-        new SalutCell()
-    };
+        new SalutCell(),
+        new ByeCell()
+	};
 
 	/**
 	 * Ask something to BoBot, it will respond to you.

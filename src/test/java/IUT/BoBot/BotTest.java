@@ -32,4 +32,11 @@ public class BotTest
     {
         assertEquals(null, bot.ask("This is not a question."));
     }
+    
+    @Test
+    public void testBonjourJeMAppelleShouldTriggerOnlyFirstSmartCell()
+    {
+        assertEquals("Bonjour!", bot.ask("Bonjour je m'appelle Seb"));
+    }
+    
 }
